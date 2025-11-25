@@ -1,0 +1,12 @@
+PowerShell Execution Policy (For Current User Only)
+
+Recommended (safer):
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Allow all scripts for current user (use with caution):
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass
+
+Notes:
+- Applies ONLY to the current logged-in user.
+- Does NOT modify system-wide or machine-level policy.
+- Useful when running tools like NetScanner without admin rights.
